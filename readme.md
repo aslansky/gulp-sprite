@@ -1,5 +1,7 @@
 # [gulp](http://gulpjs.com)-sprite
 
+[![Build Status](https://travis-ci.org/aslansky/gulp-sprite.png?branch=master)](https://travis-ci.org/aslansky/gulp-sprite)
+
 > [gulp](http://gulpjs.com) task for creating a image sprite and the corresponding stylesheets
 
 ## Requirements
