@@ -1,0 +1,41 @@
+{
+  "name": "gulp-sprite",
+  "version": "0.0.1",
+  "description": "gulp task for creating image sprites and the corresponding stylesheets",
+  "license": "MIT",
+  "repository": "aslansky/gulp-sprite",
+  "author": {
+    "name": "Alexander Slansky",
+    "email": "alexander@slansky.net",
+    "url": "http://slansky.net"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "sprites",
+    "coordinates",
+    "css",
+    "scss",
+    "less",
+    "sass"
+  ],
+  "dependencies": {
+    "gulp-util": "~2.2.0",
+    "through": "~2.3.4",
+    "canvas": "~1.1.1",
+    "json2css": "~4.2.1",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
