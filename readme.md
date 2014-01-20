@@ -1,6 +1,4 @@
-# [gulp](http://gulpjs.com)-sprite
-
-[![Build Status](https://travis-ci.org/aslansky/gulp-sprite.png?branch=master)](https://travis-ci.org/aslansky/gulp-sprite)
+# [gulp](http://gulpjs.com)-sprite [![NPM version](https://badge.fury.io/js/gulp-sprite.png)](http://badge.fury.io/js/gulp-sprite) [![Build Status](https://travis-ci.org/aslansky/gulp-sprite.png?branch=master)](https://travis-ci.org/aslansky/gulp-sprite) [![Dependencies](https://david-dm.org/aslansky/gulp-sprite.png)](https://david-dm.org/aslansky/gulp-sprite)
 
 > [gulp](http://gulpjs.com) task for creating a image sprite and the corresponding stylesheets
 
