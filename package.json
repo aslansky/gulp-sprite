@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "description": "gulp task for creating image sprites and the corresponding stylesheets",
   "license": "MIT",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/aslansky/gulp-sprite.git"
   },
-  "repository": "aslansky/gulp-sprite",
+  "homepage": "https://github.com/aslansky/gulp-sprite",
   "bugs": {
     "url" : "https://github.com/aslansky/gulp-sprite/issues"
   },
