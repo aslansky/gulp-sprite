@@ -15,7 +15,7 @@ module.exports = function(fileName, opt) {
     throw new PluginError('gulp-sprite',  'Missing fileName option for gulp-sprite');
   }
 
-  opt = lodash.extend({margin: 5, preprocessor: 'css', imagePath: '', prefix: '_'}, opt);
+  opt = lodash.extend({margin: 5, preprocessor: 'css', imagePath: '', prefix: '', orientation: 'vertical'}, opt);
 
   var firstFile = null;
   var sprites = [];
@@ -40,16 +40,24 @@ module.exports = function(fileName, opt) {
     sprites.push({
       'img': img,
       'name': gutil.replaceExtension(file.relative, ''),
-      'x': opt.margin,
-      'y': ctxHeight + opt.margin,
+      'x': opt.orientation === 'vertical' ? opt.margin : ctxWidth + opt.margin,
+      'y': opt.orientation === 'vertical' ? ctxHeight + opt.margin: opt.margin,
       'width': img.width,
       'height': img.height,
       'image': path.join(opt.imagePath, fileName)
     });
 
-    ctxHeight = ctxHeight + img.height + 2 * opt.margin;
-    if (img.width + 2 * opt.margin > ctxWidth) {
-      ctxWidth = img.width + 2 * opt.margin;
+    if (opt.orientation === 'vertical') {
+      ctxHeight = ctxHeight + img.height + 2 * opt.margin;
+      if (img.width + 2 * opt.margin > ctxWidth) {
+        ctxWidth = img.width + 2 * opt.margin;
+      }
+    }
+    else {
+      ctxWidth = ctxWidth + img.width + 2 * opt.margin;
+      if (img.height + 2 * opt.margin > ctxHeight) {
+        ctxHeight = img.height + 2 * opt.margin;
+      }
     }
   }
 

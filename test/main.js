@@ -17,7 +17,7 @@ var file2 = new gutil.File({
   contents: fs.readFileSync(path.join(__dirname, 'fruit-computer.png'))
 });
 
-it('should create a sprite png file', function (cb) {
+it('should create a vertical sprite png file', function (cb) {
   var stream = sprite('sprites.png');
 
   stream.on('data', function (file) {
@@ -34,11 +34,29 @@ it('should create a sprite png file', function (cb) {
   stream.end();
 });
 
+it('should create a horizontal sprite png file', function (cb) {
+  var stream = sprite('sprites.png', {
+    orientation: 'horizontal'
+  });
+
+  stream.on('data', function (file) {
+    var img = new Image();
+    img.src = file.contents;
+    assert.equal(file.relative, 'sprites.png');
+    assert.equal(img.width, 110);
+    assert.equal(img.height, 69);
+    cb();
+  });
+
+  stream.write(file1);
+  stream.write(file2);
+  stream.end();
+});
+
 it('should create a stylesheet file', function (cb) {
   var stream = sprite('sprites.png', {
     imagePath: '../img',
     cssPath: './test',
-    prefix: '',
     preprocessor: 'css'
   });
 

@@ -57,7 +57,7 @@ gulp.task('sprites', function () {
 
 ### prefix
 
-**default:** '_'
+**default:** ''
 
 **description:** The prefix for the stylesheet file
 
@@ -67,6 +67,13 @@ gulp.task('sprites', function () {
 
 **description:** The output style for the stylesheets.
 One of: css, less, sass, scss or stylus.
+
+### orientation
+
+**default:** vertical
+
+**description:** The orientation in which the images are aligned in the sprite
+On of: vertical, horizontal
 
 ### margin
 
