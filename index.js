@@ -37,6 +37,7 @@ module.exports = function(fileName, opt) {
 
     var img = new Image();
     img.src = file.contents;
+    this.pause();
     sprites.push({
       'img': img,
       'name': gutil.replaceExtension(file.relative, ''),
@@ -59,6 +60,7 @@ module.exports = function(fileName, opt) {
         ctxHeight = img.height + 2 * opt.margin;
       }
     }
+    this.resume();
   }
 
   function endStream () {

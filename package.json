@@ -1,6 +1,6 @@
 {
   "name": "gulp-sprite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "gulp task for creating image sprites and the corresponding stylesheets",
   "license": "MIT",
   "repository": {
