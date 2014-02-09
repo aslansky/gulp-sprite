@@ -89,3 +89,5 @@ On of: vertical, horizontal
 ## License
 
 MIT © [Alexander Slansky](http://slansky.net)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/aslansky/gulp-sprite/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
