@@ -2,6 +2,11 @@
 
 > [gulp](http://gulpjs.com) task for creating a image sprite and the corresponding stylesheets
 
+## DEPRECATION NOTICE
+
+Please use [css-sprite](https://github.com/aslansky/css-sprite) instead of this gulp plugin.
+
+
 ## Requirements
 
 `gulp-sprite` requires [node-canvas](https://github.com/learnboost/node-canvas) which depends on [Cairo](http://cairographics.org/).
