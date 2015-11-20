@@ -87,6 +87,9 @@ module.exports = function(fileName, opt) {
       var cssPath = path.join(firstFile.cwd, opt.cssPath, opt.prefix + gutil.replaceExtension(fileName, '.' + opt.preprocessor));
       var css = json2css(sprites, {'format': opt.preprocessor});
       var that = this;
+      
+      css = css.replace(/\\/g, '/');
+      
       fs.writeFile(cssPath, css, function () {
         that.emit('data', sprite);
         that.emit('end');
